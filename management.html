@@ -1,0 +1,280 @@
+<html lang="zh-cn"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人账户管理</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    body{
+      padding-top: 60px;
+    }
+    .pagination{
+      position:absolute;
+      bottom: 35px;
+      left: 43%;
+
+    }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">个人账户管理</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#summary-container">游戏</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">信息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">个人资料</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">密码管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 内容 -->
+<input type="text" class="form-control" placeholder="请输入关键字" style="width:10%;display:inline-block;margin-left:10px" id="content">
+<button type="button" class="btn btn-warning" id='search1'><span class="glyphicon glyphicon-search"></span>
+条件搜索</button>
+<button type="button" class="btn btn-primary" id = 'd1'>添加</button>
+<button type="button" class="btn btn-success">修改</button>
+<button type="button" class="btn btn-danger" id = 'd2'>删除</button>
+<table class="table" id='tb'>
+  <thead>
+    <th><input type="checkbox"></th>
+    <th>编码</th>
+    <th>名称</th>
+    <th>备注</th>
+    <th>状态</th>
+    <th>创建时间</th>
+    <th>登录时间</th>
+    <th>账号类型</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>1</td>
+    <td>张</td>
+    <td>1备注1</td>
+    <td>1登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>2</td>
+    <td>李</td>
+    <td>2备注2</td>
+    <td>2登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>3</td>
+    <td>王</td>
+    <td>3备注3</td>
+    <td>3登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+   <tr>
+   <td><input type="checkbox"></td>
+   <td>4</td>
+    <td>刘</td>
+    <td>4备注4</td>
+    <td>4登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox"></td>
+   <td>5</td>
+    <td>颜</td>
+    <td>5备注5</td>
+    <td>5登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+   <td><input type="checkbox"></td>
+   <td>6</td>
+    <td>夏</td>
+    <td>6备注6</td>
+    <td>6登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>7</td>
+    <td>完颜</td>
+    <td>7备注7</td>
+    <td>7登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>8</td>
+    <td>孙</td>
+    <td>8备注8</td>
+    <td>8登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>9</td>
+    <td>慕容</td>
+    <td>9备注9</td>
+    <td>9登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>10</td>
+    <td>曾</td>
+    <td>10备注10</td>
+    <td>10登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>11</td>
+    <td>周</td>
+    <td>11备注11</td>
+    <td>11登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>12</td>
+    <td>汉</td>
+    <td>12备注12</td>
+    <td>12登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>13</td>
+    <td>清</td>
+    <td>13备注13</td>
+    <td>13登录</td>
+    <td>2016.9.17</td>
+    <td>PM21:31</td>
+    <td>一般账号</td>
+  </tr>
+  </tbody>
+</table>
+<nav>
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</nav>
+<div style='width:100%;height:30px;background-color: #ccc;text-align: center;position: absolute;bottom: 0;'>
+        <p>© 2016 夏崇鑫 </p>
+    </div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+   window.onload = function(){
+    var tb = document.getElementById('tb')
+    var cont = document.getElementById('content');
+    var btn = document.getElementById('search1');
+    //搜索函数
+    btn.onclick = function(){
+          for(var i=0;i<tb.tBodies[0].rows.length;i++){
+          var Text = tb.tBodies[0].rows[i].cells[2].innerHTML;
+          tb.tBodies[0].rows[i].style.background = '';
+          //用split将sText内容拆分进而循环进行模糊匹配
+          var sText = cont.value.split(' ');
+          for(var j=0;j<sText.length;j++){
+          if((Text).search(sText[j])>=0){
+                 tb.tBodies[0].rows[i].style.background = '#ccc';
+          }
+        }
+        }
+    }
+    //搜索函数结束
+    //添加函数
+    d1.onclick =function(){
+      var otr = document.createElement('tr');
+      var otd = document.createElement('td');
+      otd.innerHTML = '<input type="checkbox">';
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = tb.tBodies[0].rows.length+1;
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML ='唐';
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = (tb.tBodies[0].rows.length+1)+'备注'+(tb.tBodies[0].rows.length+1);
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = (tb.tBodies[0].rows.length+1)+'登录';
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = '2016.9.17';
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = 'PM21:31';
+      otr.appendChild(otd);
+      var otd = document.createElement('td');
+      otd.innerHTML = '一般账号';
+      otr.appendChild(otd);
+      tb.tBodies[0].appendChild(otr);
+
+    }
+    //删除函数
+    d2.onclick = function(){
+      tb.tBodies[0].removeChild(tb.tBodies[0].rows[tb.tBodies[0].rows.length-1])
+    }
+   }
+</script>
+
+
+</body></html>
